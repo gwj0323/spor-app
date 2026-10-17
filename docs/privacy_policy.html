@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spor · Privacy Policy / 隐私政策 / Privatlivspolitik</title>
+    <title>Privacy Policy / 隐私政策 / Privatlivspolitik - Spor</title>
     <style>
         :root {
             --primary: #C72027;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --border: #e2e8f0;
+            --primary-bg: #fef2f2;
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
             --bg-page: #f8fafc;
             --bg-card: #ffffff;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.7;
-            color: var(--text-main);
-            max-width: 820px;
+            color: var(--text-body);
+            max-width: 880px;
             margin: 0 auto;
-            padding: 24px 16px;
+            padding: 32px 16px;
             background-color: var(--bg-page);
         }
         .container {
             background: var(--bg-card);
-            padding: 36px 32px;
-            border-radius: 20px;
+            padding: 40px 36px;
+            border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-color);
         }
         .lang-switch {
             display: flex;
-            gap: 8px;
-            margin-bottom: 24px;
+            gap: 6px;
+            margin-bottom: 28px;
             background: #f1f5f9;
-            padding: 5px;
-            border-radius: 12px;
+            padding: 6px;
+            border-radius: 10px;
             width: fit-content;
         }
         .lang-btn {
@@ -45,55 +47,71 @@
             font-size: 14px;
             font-weight: 600;
             color: var(--text-muted);
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: all 0.2s ease;
         }
         .lang-btn:hover {
-            color: var(--text-main);
+            color: var(--text-heading);
         }
         .lang-btn.active {
             background: #ffffff;
             color: var(--primary);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         }
         h1 {
-            color: var(--text-main);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 12px;
-            font-size: 24px;
+            color: var(--text-heading);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            font-size: 26px;
             margin-top: 0;
+            font-weight: 700;
         }
         h2 {
+            color: var(--text-heading);
+            margin-top: 32px;
+            font-size: 19px;
+            font-weight: 600;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+        h3 {
             color: #1e293b;
-            margin-top: 24px;
-            font-size: 18px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
         }
         p, li {
-            color: var(--text-muted);
-            font-size: 15px;
+            color: var(--text-body);
+            font-size: 14.5px;
+        }
+        ul {
+            padding-left: 22px;
         }
         li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         .disclaimer {
-            background: #fef2f2;
+            background: var(--primary-bg);
             border-left: 4px solid var(--primary);
-            padding: 12px 16px;
+            padding: 14px 18px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
             font-size: 14px;
-            color: #7f1d1d;
+            color: #991b1b;
+        }
+        .meta-pills {
+            margin-bottom: 16px;
         }
         .meta-pill {
             display: inline-block;
             background: #f1f5f9;
             color: #475569;
-            padding: 3px 10px;
+            padding: 4px 10px;
             border-radius: 6px;
             font-size: 12.5px;
             margin-right: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         .lang-section {
             display: none;
@@ -102,11 +120,11 @@
             display: block;
         }
         footer {
-            margin-top: 40px;
+            margin-top: 48px;
             font-size: 13px;
-            color: #94a3b8;
+            color: var(--text-muted);
             text-align: center;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--border-color);
             padding-top: 20px;
         }
         a {
@@ -116,169 +134,248 @@
         a:hover {
             text-decoration: underline;
         }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Language Switcher -->
         <div class="lang-switch" role="tablist">
-            <button class="lang-btn active" onclick="switchLang('en')" id="btn-en">🇬🇧 English</button>
-            <button class="lang-btn" onclick="switchLang('zh')" id="btn-zh">🇨🇳 中文</button>
-            <button class="lang-btn" onclick="switchLang('da')" id="btn-da">🇩🇰 Dansk</button>
+            <button class="lang-btn active" onclick="switchLang('en')" id="btn-en">English</button>
+            <button class="lang-btn" onclick="switchLang('zh')" id="btn-zh">中文</button>
+            <button class="lang-btn" onclick="switchLang('da')" id="btn-da">Dansk</button>
         </div>
 
         <!-- English Section -->
         <div id="lang-en" class="lang-section active">
-            <h1>Spor · Privacy Policy</h1>
-            <div>
-                <span class="meta-pill"><strong>Updated:</strong> October 17, 2026</span>
-                <span class="meta-pill"><strong>App:</strong> Spor (<code>com.spor.mobile</code>)</span>
-                <span class="meta-pill"><strong>Developer:</strong> gwj0323</span>
+            <h1>Privacy Policy for Spor</h1>
+            <div class="meta-pills">
+                <span class="meta-pill"><strong>Effective Date:</strong> October 17, 2026</span>
+                <span class="meta-pill"><strong>Application:</strong> Spor (<code>com.spor.mobile</code>)</span>
+                <span class="meta-pill"><strong>Data Controller:</strong> gwj0323</span>
             </div>
-
-            <p>Spor is an independent, open-source app created by an individual developer, not a corporation. I don't want your personal data, I don't track you, and there are zero ads or analytics trackers in the app.</p>
 
             <div class="disclaimer">
-                <strong>Note:</strong> Spor is an independent project using public timetable APIs from Rejseplanen and is not affiliated with Rejseplanen A/S or DSB.
+                <strong>Independent Service Disclaimer:</strong> Spor is an independently developed open-source client application. Spor accesses public transit timetable interfaces provided by Rejseplanen open data. Spor is not affiliated with, endorsed by, sponsored by, or operated by Rejseplanen A/S, DSB (Danske Statsbaner), or any public transit authority.
             </div>
 
-            <h2>1. Your Location (GPS)</h2>
-            <p>When you tap "Find nearby", your phone checks its GPS position and asks Rejseplanen for stops close to those coordinates. That is all.</p>
+            <h2>1. Introduction and Scope</h2>
+            <p>This Privacy Policy outlines how the application <strong>Spor</strong> ("the Application", package identifier <code>com.spor.mobile</code>, including mobile and desktop clients) handles data. Spor is committed to safeguarding user privacy in accordance with applicable data protection laws, including the General Data Protection Regulation (Regulation (EU) 2016/679, "GDPR").</p>
+
+            <h2>2. Principles of Data Processing</h2>
+            <p>Spor is engineered under the principle of <strong>data minimization</strong> (GDPR Article 5(1)(c)):</p>
             <ul>
-                <li>Your location is never stored on any server.</li>
-                <li>The app never tracks you in the background.</li>
-                <li>Your position is never shared with me or anyone else.</li>
+                <li><strong>No User Account Requirement:</strong> The Application does not require user registration, account creation, email verification, or authentication credentials.</li>
+                <li><strong>No Remote User Identification:</strong> The Application does not collect hardware identifiers (such as IMEI, MAC address, or Android Advertising ID) and does not perform user profiling.</li>
+                <li><strong>No Commercial Data Transfer:</strong> No user data is sold, rented, leased, or disclosed to commercial third parties or data brokers.</li>
             </ul>
 
-            <h2>2. Notifications & Reminders</h2>
-            <p>When you turn on departure, transfer, or arrival alerts, your phone manages the alarm locally using the system's built-in notification manager. The optional ongoing trip card in the notification shade also runs completely on your phone. No remote push servers are used.</p>
+            <h2>3. Categories of Data Processed and Purposes</h2>
 
-            <h2>3. Calendar</h2>
-            <p>If you tap "Add to Calendar", Spor adds that specific journey to your personal calendar. The app never reads, inspects, or touches your existing calendar entries.</p>
+            <h3>3.1 Geolocation Data</h3>
+            <p><strong>Permissions:</strong> <code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>.</p>
+            <p><strong>Purpose and Handling:</strong> Geolocation coordinates (latitude and longitude) are accessed exclusively upon explicit user invocation (e.g., selecting "Find Nearby Stations"). The coordinates are transmitted directly to the Rejseplanen API endpoint over encrypted HTTPS solely to retrieve transit stops in the vicinity.</p>
+            <p><strong>Retention:</strong> Geolocation data is processed ephemerally in volatile memory for the duration of the network request. It is <strong>never retained on remote servers, logged to persistent remote databases, tracked continuously in the background, or linked to user identity</strong>.</p>
 
-            <h2>4. Commute Habits (Route Recommendations)</h2>
-            <p>The app adapts the order of suggested routes to how you travel (for example, if you prefer Metro over bus, like longer transfer buffers, or usually travel at certain hours).</p>
+            <h3>3.2 Notifications and Alarms</h3>
+            <p><strong>Permissions:</strong> <code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>.</p>
+            <p><strong>Purpose and Handling:</strong> Used exclusively to schedule local alerts for scheduled trip departures, intermediate transfer times, and arrival notifications, or to display an optional persistent notification card during an active journey.</p>
+            <p><strong>Execution:</strong> All scheduling and dispatching are executed <strong>entirely on-device</strong> using the operating system's local alarm and notification services. No remote push messaging servers are utilized.</p>
+
+            <h3>3.3 Device Calendar Integration</h3>
+            <p><strong>Purpose and Handling:</strong> When the user explicitly initiates the "Add to Calendar" action, the Application formats the chosen itinerary (departure, arrival, transit line, and platform information) and requests the operating system's calendar provider to insert the event.</p>
+            <p><strong>Scope:</strong> Access is strictly write-directed for the specific transit event selected. The Application <strong>does not inspect, read, analyze, export, or modify any existing calendar events</strong>.</p>
+
+            <h3>3.4 On-Device Commute Preference Learning</h3>
+            <p><strong>Purpose and Handling:</strong> The Application includes an on-device personalization engine (<code>TransitMlEngine</code>) that adapts the presentation order of journey proposals to accommodate user preferences (such as preferred transport modes, transfer buffer durations, and frequent commute time windows).</p>
+            <p><strong>Processing Architecture:</strong> All mathematical computations and model parameter updates are conducted <strong>strictly on-device</strong>. No habit records, feature vectors, or model parameters are ever transmitted to external servers or cloud infrastructure.</p>
+            <p><strong>Storage and Control:</strong> Preference weights and historical counters are stored solely within the Application’s sandboxed local container (<code>SharedPreferences</code>). Users may completely reset all learned preferences and commute history at any time via <em>Settings &gt; Commute Habits &gt; Reset Habits</em>.</p>
+
+            <h2>4. Technical and Organizational Security Measures</h2>
             <ul>
-                <li>This happens <strong>100% on your device</strong>.</li>
-                <li>Nothing is sent over the network or stored in the cloud.</li>
-                <li>You can wipe all learned habits at any time under <em>Settings &gt; Commute Habits &gt; Reset Habits</em>.</li>
+                <li><strong>Mandatory Transport Layer Security (TLS):</strong> All outbound communications with public transit API endpoints are strictly enforced over HTTPS (TLS 1.2/1.3). Unencrypted HTTP connections are programmatically prohibited.</li>
+                <li><strong>Secure Local Storage:</strong> Any personal API credentials (such as a user-configured Rejseplanen <code>accessId</code>) are maintained strictly within the platform's isolated application sandbox.</li>
+                <li><strong>Credential Masking in Error Logs:</strong> All network exception handlers automatically redact sensitive query parameters (e.g., converting <code>accessId=...</code> to <code>accessId=***</code>) to prevent unintended credential leakage in diagnostic outputs or interface alerts.</li>
             </ul>
 
-            <h2>5. Network Traffic & API Keys</h2>
-            <p>All network requests are encrypted over HTTPS. If you enter your own Rejseplanen accessId (API Key), it stays on your phone inside the app's sandboxed storage. Error messages automatically hide the key (<code>accessId=***</code>) so it is never exposed in logs or on screen.</p>
+            <h2>5. Third-Party Libraries, Analytics, and Advertising</h2>
+            <ul>
+                <li><strong>Advertising Frameworks:</strong> Spor contains <strong>no third-party commercial advertising SDKs</strong> (e.g., Google AdMob, Unity Ads, Meta Audience Network).</li>
+                <li><strong>Analytics and Tracking SDKs:</strong> Spor contains <strong>no behavioral tracking, user telemetry, or analytics SDKs</strong> (e.g., Google Analytics, Firebase Analytics, Flurry, AppsFlyer).</li>
+            </ul>
+            <p>All transit scheduling data is obtained through direct HTTPS requests to public transit open data endpoints.</p>
 
-            <h2>6. No Ads, No Trackers</h2>
-            <p>There are zero advertising libraries (like AdMob) and zero analytics SDKs (like Google Analytics or Firebase) in Spor.</p>
+            <h2>6. Data Retention and Deletion Rights</h2>
+            <p>In compliance with GDPR Articles 15–17:</p>
+            <ul>
+                <li><strong>Right to Erasure:</strong> Users retain complete sovereignty over locally stored data. Search histories, saved stations, and commute habits can be cleared on-demand within the Application interface.</li>
+                <li><strong>Complete Deletion:</strong> Clearing application storage via device system settings or uninstalling the Application results in the permanent and irreversible deletion of all local configuration files, preferences, and cached records.</li>
+            </ul>
 
-            <h2>7. Deleting Your Data</h2>
-            <p>Everything Spor saves (favorite stations, recent searches, preferences, and commute habits) lives only on your device. You can reset habits or clear favorites directly in the app. If you clear the app's data in system settings or uninstall Spor, everything is permanently removed.</p>
+            <h2>7. Children's Privacy</h2>
+            <p>The Application does not knowingly collect, process, or solicit personal data from children under the age of 16. The Application provides public transit timetable information suitable for general audiences.</p>
 
-            <h2>Questions?</h2>
-            <p>Feel free to open an issue or reach out on GitHub: <a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a></p>
+            <h2>8. Contact Information</h2>
+            <p>For inquiries, legal notices, or technical questions concerning this Privacy Policy, please submit an issue through the project repository: <a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a>.</p>
         </div>
 
         <!-- Chinese Section -->
         <div id="lang-zh" class="lang-section">
-            <h1>Spor · 隐私政策</h1>
-            <div>
-                <span class="meta-pill"><strong>更新时间：</strong> 2026 年 10 月 17 日</span>
+            <h1>Spor 隐私政策</h1>
+            <div class="meta-pills">
+                <span class="meta-pill"><strong>生效日期：</strong> 2026 年 10 月 17 日</span>
                 <span class="meta-pill"><strong>应用标识：</strong> <code>com.spor.mobile</code></span>
-                <span class="meta-pill"><strong>开发者：</strong> gwj0323</span>
+                <span class="meta-pill"><strong>数据控制方：</strong> gwj0323</span>
             </div>
-
-            <p>Spor 是一款由独立开发者开发的轻量开源丹麦公交出行应用。我不需要你的个人数据，应用里没有任何广告，也没有任何追踪或统计组件。</p>
 
             <div class="disclaimer">
-                <strong>注：</strong> Spor 是使用 Rejseplanen 公开开放接口的独立第三方应用，与 Rejseplanen A/S 或丹麦国铁 (DSB) 无官方隶属关系。
+                <strong>独立服务声明：</strong> Spor 是一款由独立开发者开发的开源公共出行助手客户端。本应用基于 Rejseplanen 开放数据平台提供的公开时刻表接口运行，与 Rejseplanen A/S、丹麦国家铁路（DSB，Danske Statsbaner）或任何公共交通运营机构均无任何从属、授权、赞助或官方运营关系。
             </div>
 
-            <h2>1. 位置信息 (GPS)</h2>
-            <p>只有在你主动点击“查找附近”时，应用才会读取你当前的 GPS 坐标，用于向 Rejseplanen 查询周边的站点列表。</p>
+            <h2>1. 前言与适用范围</h2>
+            <p>本隐私政策阐明了应用程序 <strong>Spor</strong>（以下简称“本应用”，应用包名 <code>com.spor.mobile</code>，涵盖移动端及桌面端）关于数据收集、使用与保护的规范。本应用致力于严格遵循适用的数据保护法律法规，包括《通用数据保护条例》（Regulation (EU) 2016/679，简称“GDPR”）及相关法律要求。</p>
+
+            <h2>2. 数据处理的基本原则</h2>
+            <p>本应用严格贯彻<strong>数据最小化原则</strong>（GDPR 第 5 条第 1 款 (c) 项）：</p>
             <ul>
-                <li>坐标绝不会保存在任何服务器上；</li>
-                <li>应用不会在后台偷偷定位或追踪你的轨迹；</li>
-                <li>你的位置不会发送给我，也不会分享给任何第三方。</li>
+                <li><strong>无需账户体系：</strong> 用户无需注册、登录或提供手机号码、电子邮箱等任何个人身份凭据即可完整使用本应用所有功能。</li>
+                <li><strong>无远程身份识别：</strong> 本应用不收集设备硬件唯一识别码（如 IMEI、MAC 地址、Android 广告标识符等），亦不进行任何跨应用、跨设备的用户画像构建。</li>
+                <li><strong>无商业化数据转让：</strong> 本应用绝不向任何第三方商业机构或数据分析经纪商出售、转让、共享或出租用户数据。</li>
             </ul>
 
-            <h2>2. 出行提醒与通知</h2>
-            <p>当你为某个车次设置发车、换乘或到站提醒时，所有提醒都在你的手机本地由系统自带的闹钟触发。状态栏里的行程卡片也是在手机本地实时计算的，不依赖任何第三方远程推送服务。</p>
+            <h2>3. 处理的数据类型与使用目的</h2>
 
-            <h2>3. 日历</h2>
-            <p>只有在你主动点击“添加至日历”时，Spor 才会把选中的这趟车次写进你的系统日历。应用绝不会读取、查看或修改你的其他任何日程。</p>
+            <h3>3.1 地理位置信息</h3>
+            <p><strong>涉及系统权限：</strong> <code>ACCESS_FINE_LOCATION</code>（精确位置）、<code>ACCESS_COARSE_LOCATION</code>（大致位置）。</p>
+            <p><strong>处理目的与流程：</strong> 仅当用户主动触发“查找附近车站”等相关交互操作时，本应用方会临时调用设备系统定位服务获取经纬度坐标。该坐标仅通过 HTTPS 加密信道直接向 Rejseplanen 接口发起查询，用于获取临近公共交通站点列表。</p>
+            <p><strong>数据留存：</strong> 位置信息仅在单次网络查询期间在系统瞬时内存中处理，<strong>绝不在任何远程服务器中保存，不记录历史活动轨迹，不进行后台常驻定位，亦不与任何第三方实体共享</strong>。</p>
 
-            <h2>4. 出行习惯（推荐排序）</h2>
-            <p>应用会根据你平时的选择习惯（比如更常坐地铁、喜欢换乘时间更充裕的方案、或者常在某些时段出行），自动把你更可能喜欢的路线排在前面。</p>
+            <h3>3.2 通知与定时提醒权限</h3>
+            <p><strong>涉及系统权限：</strong> <code>POST_NOTIFICATIONS</code>（发送通知）、<code>SCHEDULE_EXACT_ALARM</code>（精确闹钟排程）。</p>
+            <p><strong>处理目的与流程：</strong> 仅用于在用户主动设定特定车次的发车预警、换乘提醒、到站下车提醒，或启用实时行程常驻卡片时，在设备本地进行提醒调度。</p>
+            <p><strong>技术实现：</strong> 所有提醒排程均<strong>完全在用户设备本地</strong>由操作系统底层闹钟管理器与通知服务执行，不依赖任何外部云端推送服务器。</p>
+
+            <h3>3.3 系统日历写入集成</h3>
+            <p><strong>处理目的与流程：</strong> 当用户在行程详情中主动点击“添加至日历”时，本应用生成包含车次时刻、起止站与站台备注的日程对象，并调用系统日历服务接口将该日程写入本地日历应用中。</p>
+            <p><strong>权限范围：</strong> 该功能仅为单向写入用户指定行程。本应用<strong>绝不读取、扫描、分析、导出或修改用户日历中现存的其他任何日程或私人记录</strong>。</p>
+
+            <h3>3.4 端侧出行偏好分析（出行习惯）</h3>
+            <p><strong>处理目的与流程：</strong> 本应用集成了端侧计算引擎（<code>TransitMlEngine</code>），旨在根据用户历史路线选择偏好（例如公共交通方式倾向、换乘安全裕量偏好及常用出行时间窗口），自动对查询所得的行程候选方案进行本地化排序优化。</p>
+            <p><strong>计算架构：</strong> 所有数学推断与模型更新<strong>严格在用户本地设备处理器内离线运算</strong>，绝无任何偏好特征向量、模型参数或出行统计数据经由网络外传至云端。</p>
+            <p><strong>存储与控制权：</strong> 偏好权重与计数指标仅持久化于设备本地受保护的应用沙盒环境（<code>SharedPreferences</code>）中。用户可随时通过<strong>“设置 -&gt; 出行习惯 -&gt; 清空习惯记录”</strong>彻底重置并删除所有本地偏好数据。</p>
+
+            <h2>4. 信息安全与技术防护机制</h2>
             <ul>
-                <li>这项计算 <strong>100% 在你的手机本机完成</strong>；</li>
-                <li>没有任何习惯数据或计算参数会通过网络上传；</li>
-                <li>你随时可以在<strong>“设置 -&gt; 出行习惯 -&gt; 清空习惯记录”</strong>里一键清除所有记录。</li>
+                <li><strong>强制传输层加密（TLS/HTTPS）：</strong> 本应用与公共交通数据接口之间的所有外部网络通信均强制采用 TLS 加密传输（HTTPS），严禁明文 HTTP 协议连接。</li>
+                <li><strong>凭据沙盒隔离：</strong> 若用户在设置中配置个人 Rejseplanen <code>accessId</code>（API 密钥），该密钥严格存储于系统为本应用分配的独立私有沙盒目录内。</li>
+                <li><strong>敏感参数日志脱敏：</strong> 应用内所有网络异常捕获机制均自动对敏感查询参数实施动态脱敏处理（统一转换为 <code>accessId=***</code>），杜绝在界面弹窗或本地排错日志中暴露认证凭证。</li>
             </ul>
 
-            <h2>5. 网络请求与 API 密钥</h2>
-            <p>应用内所有网络请求均强制通过 HTTPS 加密传输。如果你在设置中填写了自己的 Rejseplanen API Key (accessId)，它只保存在你手机本地。当网络发生异常时，报错信息会自动抹掉密钥部分（显示为 <code>accessId=***</code>），防止密钥意外泄露。</p>
+            <h2>5. 第三方 SDK、分析与广告声明</h2>
+            <ul>
+                <li><strong>无商业广告组件：</strong> 本应用未集成任何第三方商业广告 SDK（如 Google AdMob、穿山甲、Unity Ads 等）。</li>
+                <li><strong>无行为统计与追踪组件：</strong> 本应用未嵌入任何用户行为分析、遥测或追踪 SDK（如 Google Analytics、Firebase、友盟等）。</li>
+            </ul>
+            <p>所有实时时刻表与换乘数据均直接由 Rejseplanen 开放数据官方接口通过加密网络提供。</p>
 
-            <h2>6. 无广告、无追踪</h2>
-            <p>Spor 内部没有任何商业广告插件（如 AdMob 等），也没有植入任何埋点统计或用户画像 SDK（如 Google Analytics、Firebase 统计等）。</p>
+            <h2>6. 数据存储期限与数据主体权利</h2>
+            <p>依据 GDPR 第 15 至 17 条规定：</p>
+            <ul>
+                <li><strong>删除权（被遗忘权）：</strong> 用户对本地存储数据享有完全控制权。搜索历史、收藏路线与出行习惯记录均可在应用界面内随时单项或全量清空。</li>
+                <li><strong>彻底清除机制：</strong> 用户通过操作系统“清除应用数据”或执行卸载操作，将永久、不可逆地删除本应用存储于本地设备上的所有配置、缓存及历史数据。</li>
+            </ul>
 
-            <h2>7. 清除与删除数据</h2>
-            <p>Spor 的所有数据（收藏的车站、常用路线、搜索历史、出行习惯）都只存放在你手机本地。你可以在应用内随时清空习惯或删除收藏；在手机系统设置里“清除应用数据”或直接卸载 Spor，所有本地数据就会被彻底删除。</p>
+            <h2>7. 未成年人隐私保护</h2>
+            <p>本应用不以任何形式主动收集或处理未满 16 周岁未成年人的个人数据。本应用提供的公共交通时刻表查询服务面向全体公众，内容适合全年龄段使用。</p>
 
-            <h2>疑问与反馈</h2>
-            <p>如有任何疑问或建议，欢迎在 GitHub 提交反馈：<a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a></p>
+            <h2>8. 隐私政策的变更与生效</h2>
+            <p>本隐私政策可能随法律法规更新或应用功能迭代进行相应修订。所有修订均将在本页面更新“生效日期”并通过代码仓库公开发布。</p>
+
+            <h2>9. 联系方式与反馈途径</h2>
+            <p>如您对本隐私政策有任何法律疑问、合规咨询或建议，请通过官方开源代码仓库提交 Issue 与开发者取得联系：<a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a>。</p>
         </div>
 
         <!-- Danish Section -->
         <div id="lang-da" class="lang-section">
-            <h1>Spor · Privatlivspolitik</h1>
-            <div>
-                <span class="meta-pill"><strong>Opdateret:</strong> 17. oktober 2026</span>
+            <h1>Privatlivspolitik for Spor</h1>
+            <div class="meta-pills">
+                <span class="meta-pill"><strong>Ikrafttrædelsesdato:</strong> 17. oktober 2026</span>
                 <span class="meta-pill"><strong>Applikation:</strong> Spor (<code>com.spor.mobile</code>)</span>
-                <span class="meta-pill"><strong>Udvikler:</strong> gwj0323</span>
+                <span class="meta-pill"><strong>Dataansvarlig:</strong> gwj0323</span>
             </div>
-
-            <p>Spor er et uafhængigt open source-projekt lavet af en enkelt udvikler, ikke en stor virksomhed. Jeg ønsker ikke dine personlige oplysninger, jeg sporer dig ikke, og der er hverken reklamer eller analysesoftware i appen.</p>
 
             <div class="disclaimer">
-                <strong>Bemærk:</strong> Spor er et uafhængigt projekt baseret på åbne køreplan-API'er fra Rejseplanen og er ikke tilknyttet eller drevet af Rejseplanen A/S eller DSB.
+                <strong>Uafhængighedserklæring:</strong> Spor er en uafhængigt udviklet open source-klientapplikation. Spor benytter offentligt tilgængelige køreplan-API'er leveret af Rejseplanen åbne data. Spor er ikke tilknyttet, godkendt, sponsoreret eller drevet af Rejseplanen A/S, DSB (Danske Statsbaner) eller andre offentlige trafikselskaber.
             </div>
 
-            <h2>1. Din placering (GPS)</h2>
-            <p>Når du trykker på "Find i nærheden", tjekker telefonen sine GPS-koordinater for at spørge Rejseplanen om stoppesteder i nærheden. Det er det hele.</p>
+            <h2>1. Indledning og anvendelsesområde</h2>
+            <p>Denne privatlivspolitik beskriver, hvordan applikationen <strong>Spor</strong> ("Applikationen", pakkeidentifikator <code>com.spor.mobile</code>, herunder mobil- og desktopklienter) behandler data. Spor forpligter sig til at beskytte brugernes privatliv i overensstemmelse med gældende databeskyttelseslovgivning, herunder Europa-Parlamentets og Rådets forordning (EU) 2016/679 ("GDPR").</p>
+
+            <h2>2. Principper for databehandling</h2>
+            <p>Applikationen er udviklet i overensstemmelse med princippet om <strong>dataminimering</strong> (GDPR art. 5, stk. 1, litra c):</p>
             <ul>
-                <li>Din placering gemmes aldrig på nogen server.</li>
-                <li>Appen sporer dig aldrig i baggrunden.</li>
-                <li>Din position deles aldrig med mig eller nogen tredjepart.</li>
+                <li><strong>Intet krav om brugerkonto:</strong> Applikationen kræver ingen brugerregistrering, oprettelse af konto, e-mailbekræftelse eller loginoplysninger for fuld anvendelse af funktionaliteten.</li>
+                <li><strong>Ingen fjernidentifikation:</strong> Applikationen indsamler ikke entydige hardwareidentifikatorer (såsom IMEI, MAC-adresse eller annonce-ID) og foretager ingen profilering.</li>
+                <li><strong>Intet kommercielt videresalg:</strong> Ingen data sælges, udlejes, overdrages eller deles med kommercielle tredjeparter eller datamæglere.</li>
             </ul>
 
-            <h2>2. Påmindelser og notifikationer</h2>
-            <p>Når du slår påmindelser til for en afgang, et skift eller en ankomst, håndterer telefonen det 100% lokalt via systemets egne alarmer. Den faste rejsevisning i statuslinjen kører også udelukkende lokalt på telefonen. Der bruges ingen eksterne push-servere.</p>
+            <h2>3. Behandlede datakategorier og formål</h2>
 
-            <h2>3. Kalender</h2>
-            <p>Hvis du trykker på "Føj til kalender", opretter Spor den valgte rejse i din personlige systemkalender. Appen læser, ændrer eller rører aldrig dine øvrige kalenderaftaler.</p>
+            <h3>3.1 Lokationsdata (Geolokalisering)</h3>
+            <p><strong>Anvendte tilladelser:</strong> <code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>.</p>
+            <p><strong>Formål og håndtering:</strong> Lokationskoordinater (breddegrad og længdegrad) tilgås udelukkende efter aktiv brugerhandling (f.eks. ved tryk på "Find i nærheden"). Koordinaterne transmitteres direkte til Rejseplanens API-endepunkt via krypteret HTTPS med det ene formål at hente stoppesteder i nærområdet.</p>
+            <p><strong>Opbevaring:</strong> Lokationsdata behandles udelukkende midlertidigt i enhedens arbejdshukommelse under forespørgslen. Data <strong>gemmes aldrig på eksterne servere, logføres ikke, spores ikke kontinuerligt i baggrunden og kobles ikke til en personidentitet</strong>.</p>
 
-            <h2>4. Rejsevaner (Rækkefølge af rejseforslag)</h2>
-            <p>Appen tilpasser rækkefølgen af rejseforslag efter dine vaner (f.eks. hvis du oftere tager Metroen frem for bus, foretrækker god skiftetid eller rejser på faste tidspunkter).</p>
+            <h3>3.2 Notifikationer og alarmer</h3>
+            <p><strong>Anvendte tilladelser:</strong> <code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>.</p>
+            <p><strong>Formål og håndtering:</strong> Anvendes udelukkende til at planlægge lokale alarmer for afgange, skift og ankomster, eller til at vise et valgfrit fast rejsekort i statuslinjen under en aktiv rejse.</p>
+            <p><strong>Afvikling:</strong> Al planlægning og afsendelse af påmindelser afvikles <strong>100% lokalt på enheden</strong> via operativsystemets interne alarm- og notifikationstjeneste. Der anvendes ingen eksterne push-servere.</p>
+
+            <h3>3.3 Integration med enhedens kalender</h3>
+            <p><strong>Formål og håndtering:</strong> Når brugeren aktivt vælger "Føj til kalender", formaterer Applikationen den valgte rejse (afgangs- og ankomsttider, linje og sporoplysninger) og anmoder systemets kalendertjeneste om at indsætte begivenheden.</p>
+            <p><strong>Afgrænsning:</strong> Adgangen er strengt skriveorienteret for den specifikt valgte rejse. Applikationen <strong>læser, scanner, analyserer, videresender eller ændrer aldrig eksisterende kalenderaftaler</strong>.</p>
+
+            <h3>3.4 Maskinlæring på enheden (Rejsevaner)</h3>
+            <p><strong>Formål og håndtering:</strong> Applikationen indeholder en lokal maskinlæringsmotor (<code>TransitMlEngine</code>), der tilpasser visningsrækkefølgen af rejseforslag efter brugerens præferencer (f.eks. transportmiddelpræferencer, skiftetidsintervaller og faste rejsetidspunkter).</p>
+            <p><strong>Behandlingsarkitektur:</strong> Alle matematiske beregninger og opdateringer af modelvægte foregår <strong>udelukkende lokalt på enhedens processor</strong>. Ingen præferencedata, egenskabsvektorer eller statistikker transmitteres til eksterne servere eller cloudtjenester.</p>
+            <p><strong>Lagring og kontrol:</strong> Vægte og overgangsstatistikker opbevares udelukkende i enhedens sandkasselagring (<code>SharedPreferences</code>). Brugeren kan til enhver tid nulstille alle gemte vaner via <em>Indstillinger &gt; Rejsevaner &gt; Nulstil vaner</em>.</p>
+
+            <h2>4. Tekniske og organisatoriske sikkerhedsforanstaltninger</h2>
             <ul>
-                <li>Alt dette sker <strong>100% lokalt på din telefon</strong>.</li>
-                <li>Intet sendes over netværket eller gemmes i skyen.</li>
-                <li>Du kan til enhver tid slette alle gemte vaner under <em>Indstillinger &gt; Rejsevaner &gt; Nulstil vaner</em>.</li>
+                <li><strong>Obligatorisk kryptering (TLS/HTTPS):</strong> Al ekstern netværkskommunikation med køreplan-API'er er strengt tvunget over krypteret HTTPS (TLS 1.2/1.3). Ukrypteret HTTP-trafik er programmatisk blokeret.</li>
+                <li><strong>Sikker lokal lagring:</strong> Eventuelle brugerdefinerede API-nøgler (såsom en personlig Rejseplanen <code>accessId</code>) opbevares udelukkende i applikationens isolerede lokale sandkasse.</li>
+                <li><strong>Sløring i fejlmeddelelser:</strong> Alle netværksfejlhåndteringer slører automatisk følsomme parametre (f.eks. <code>accessId=***</code>) for at forhindre utilsigtet eksponering i systemmeddelelser eller logs.</li>
             </ul>
 
-            <h2>5. Netværk og API-nøgler</h2>
-            <p>Al netværkstrafik foregår krypteret over HTTPS. Hvis du indtaster din egen Rejseplanen-nøgle (accessId), bliver den udelukkende liggende på din telefon. Ved netværksfejl skjuler appen automatisk nøglen (<code>accessId=***</code>), så den ikke vises i fejlbeskeder.</p>
+            <h2>5. Tredjeparts-SDK'er, analyse og annoncering</h2>
+            <ul>
+                <li><strong>Annoncenetværk:</strong> Spor indeholder <strong>ingen tredjeparts kommercielle annonce-SDK'er</strong> (såsom Google AdMob eller Meta Audience Network).</li>
+                <li><strong>Analysesoftware:</strong> Spor indeholder <strong>ingen adfærdssporing, telemetri eller analyse-frameworks</strong> (såsom Google Analytics eller Firebase).</li>
+            </ul>
+            <p>Alle køreplan- og afgangsdata hentes via direkte HTTPS-kald til Rejseplanens åbne køreplan-API.</p>
 
-            <h2>6. Ingen reklamer, ingen sporing</h2>
-            <p>Der er nul reklame-frameworks (som AdMob) og nul analyseværktøjer (som Google Analytics eller Firebase) i Spor.</p>
+            <h2>6. Opbevaring, sletning og rettigheder efter GDPR</h2>
+            <p>I overensstemmelse med GDPR artikel 15-17:</p>
+            <ul>
+                <li><strong>Ret til sletning:</strong> Brugeren har fuld kontrol over lokalt gemte data. Søgehistorik, favoritstationer og rejsevaner kan slettes direkte i brugerfladen.</li>
+                <li><strong>Fuldstændig sletning:</strong> Sletning af applikationsdata via enhedens systemindstillinger eller afinstallation af Applikationen sletter permanent og uigenkaldeligt alle lokale konfigurationsfiler, præferencer og data.</li>
+            </ul>
 
-            <h2>7. Sletning af data</h2>
-            <p>Alt hvad Spor gemmer (favoritstationer, seneste søgninger, indstillinger og rejsevaner), findes kun på din egen enhed. Du kan slette vaner og favoritter direkte i appen. Rydder du appens data i telefonens indstillinger eller afinstallerer Spor, slettes alle data permanent.</p>
+            <h2>7. Børns privatliv</h2>
+            <p>Applikationen indsamler eller anmoder ikke bevidst om personoplysninger fra børn under 16 år. Applikationens indhold er velegnet til alle aldersgrupper med behov for køreplanopslag.</p>
 
-            <h2>Spørgsmål?</h2>
-            <p>Du er altid velkommen til at oprette et issue eller skrive på GitHub: <a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a></p>
+            <h2>8. Kontaktinformation</h2>
+            <p>Ved spørgsmål eller henvendelser vedrørende denne privatlivspolitik kan der oprettes et issue i projektets GitHub-arkiv: <a href="https://github.com/gwj0323/spor-app/issues" target="_blank">github.com/gwj0323/spor-app</a>.</p>
         </div>
 
         <footer>
-            &copy; 2026 Spor (gwj0323). Open source under the MIT License.
+            &copy; 2026 Spor. All rights reserved. Open-source under the MIT License.
         </footer>
     </div>
 
@@ -295,7 +392,6 @@
             }
         }
 
-        // Auto-detect browser language
         (function() {
             const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
             if (userLang.startsWith('zh')) {
